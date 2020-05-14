@@ -1,0 +1,23 @@
+
+
+
+
+$grid-gutter : 20px !default;
+$grid-max-width : 1200px + ($grid-gutter * 2) !default;
+$grid-column : 12 !default;
+
+
+$breakpoint-sm : 767px;
+$breakpoint-md : 992px;
+$breakpoint-lg : 1200px;
+
+$breakpoints : (
+    'lg' : '(min-width : #{$breakpoint-lg})',
+    'md' : '(min-width : #{$breakpoint-md}) and (max-width: #{$breakpoint-lg - 1})',
+    'sm' : '(min-width : #{$breakpoint-sm}) and (max-width: #{$breakpoint-md - 1})',
+    'xs' : '(max-width : #{$breakpoint-sm})'
+) !default;
+
+
+
+

@@ -1,0 +1,47 @@
+
+@import "./default";
+@import './mixin';
+
+
+
+.add{
+  display: none;
+}
+
+.container{
+   @include clearfix;
+   max-width: $grid-max-width;
+   margin: 0 auto;
+   padding: 0 auto;
+}
+
+
+.row {
+   @include clearfix;
+   list-style: none;
+   margin-left: $grid-gutter;
+   &.row-gutterless & {
+    margin-left: 0;
+   }
+}
+
+
+
+
+
+.col{
+  float : left ; 
+  padding-left: $grid-gutter;
+  box-sizing: border-box;
+  .row-gutterless & {
+   padding-left: 0;
+  }
+}
+
+
+
+@each $name , $declartion in $breakpoints {
+     @media only screen and #{$declartion} {
+       @include grid-loop($name);
+     }
+}
